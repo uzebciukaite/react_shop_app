@@ -21,7 +21,7 @@ const OtherItems = ({setsingleitem}) => {
 
   return (
    <Container>
-    <Row xs={2} md={3} lg={4} className=" bg-succes">
+    <Row xs={1} md={2} lg={4} className=" bg-succes">
          
     {random && random.map((x,i) => (
         <SingleItem item={x} openItem={() => openItem(x.id, x)}/>
