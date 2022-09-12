@@ -1,4 +1,4 @@
-import {React} from 'react'
+import {React, useEffect} from 'react'
 import {useSelector} from "react-redux"
 import {Container, Row, Col, Card} from 'react-bootstrap'
 
@@ -12,6 +12,12 @@ function HomePage({setsingleitem}) {
 
 const nav = useNavigate()
 const discounts = useSelector(state => state.items.value.biggestDiscounts)
+
+useEffect(() => {
+    // 👇️ scroll to top on page load
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }, []);
+
 
 
 const openAll = () => {

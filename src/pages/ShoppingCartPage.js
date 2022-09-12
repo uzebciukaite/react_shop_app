@@ -1,4 +1,4 @@
-import React from 'react'
+import {React, useEffect} from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import SingleItemCart from '../components/SingleItemCart'
 import { deletefromChart } from '../features/chart'
@@ -10,6 +10,11 @@ const cartitems = useSelector(state => state.chart.value.chartItems)
 const totalprice = useSelector(state => state.chart.value.totalPrice)
 const dispatch = useDispatch() 
 
+
+useEffect(() => {
+    // 👇️ scroll to top on page load
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }, []);
 
 function deleteItem(index){
 

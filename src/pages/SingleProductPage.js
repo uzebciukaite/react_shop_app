@@ -11,8 +11,14 @@ const SingleProductPage = ({getsingleitem, setsingleitem}) => {
 const nav = useNavigate()
 const dispatch = useDispatch()
 
+useEffect(() => {
+    // 👇️ scroll to top on page load
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }, []);
 
-    function addItemtoChart(){
+
+
+  function addItemtoChart(){
 const newaddeditem = {
     id: getsingleitem.id,
     image: getsingleitem.image,
