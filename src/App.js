@@ -30,7 +30,7 @@ const [items, setItems] = useState([])
 <Routes>
   
  <Route path="/shop" element={<ShopPage  setsingleitem={setsingleitem}/>}/>
- <Route path="/" element={<HomePage setsingleitem={setsingleitem}
+ <Route path="/react_shop_app" element={<HomePage setsingleitem={setsingleitem}
  />}/>
  <Route path="/product/:id" element={<SingleProductPage getsingleitem={getsingleitem} setsingleitem={setsingleitem} items={items} setsingleitem={setsingleitem} />}/>
  <Route path="/cart" element={<ShoppingCartPage/>}/>
